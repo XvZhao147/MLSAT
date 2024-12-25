@@ -70,11 +70,11 @@ python test_transformer.py --batch_size 50 --features_path /path/to/features --m
 
 We provide pretrained model [here](https://pan.baidu.com/s/1QwTpOBHxBlchR3NlhG3Djw?pwd=6666).
 
-| Model 	| B@1 	| B@4 	|        M   	| R 	| C 	| S |
+|       Model    	| B@1 	| B@4 	|        M   	| R 	| C 	| S |
 
-|:---------:	|:-------:	|:-:	|:---------------:	|:--------------------------:	|:-------:	| :-------:|
+|:-------------------------------:	| :-------:	| :---:	|:---:	| :---:	| :---:	| :---: |
 
-|   Reproduced Model (ResNext101) 	|   81.3   	| 39.8 	| 29.6 	|   59.2  	|  134.5 	|  23.2|
+|   Reproduced Model (ResNext101) 	|   81.3   	| 39.8 	| 29.6 	| 59.2  | 134.5 |  23.2 |
 
 
 
