@@ -56,15 +56,14 @@ if __name__ == '__main__':
     parser.add_argument('--workers', type=int, default=4)
     parser.add_argument('--m', type=int, default=40)
 
-    parser.add_argument('--features_path', type=str, default='/data/datasets/ImageCaptioning/coco/X101-features/X101_grid_feats_coco_trainval.hdf5')
-    parser.add_argument('--annotation_folder', type=str, default='/data/datasets/ImageCaptioning/coco/annotations')
+    parser.add_argument('--features_path', type=str, default='/coco/X101-features/X101_grid_feats_coco_trainval.hdf5')
+    parser.add_argument('--annotation_folder', type=str, default='/coco/annotations')
     
     # the path of tested model and vocabulary
-    parser.add_argument('--model_path', type=str, default='/data/songshan/grid-Transformer2/fimal_seed1234_N5_as_rp/demo_best_31.pth')
+    parser.add_argument('--model_path', type=str, default='')
     parser.add_argument('--vocab_path', type=str, default='vocab.pkl')
 
     parser.add_argument('--num_semantics', type=int, default=5)
-    parser.add_argument('--dump_json', type=str, default='gen_res1.json')
     parser.add_argument('--only_test', action='store_true', default=False)
     args = parser.parse_args()
 
@@ -78,7 +77,7 @@ if __name__ == '__main__':
                            remove_punctuation=True, nopoints=False)
 
     # Create the dataset
-    dataset = COCO(image_field, text_field, '/data/datasets/ImageCaptioning/coco/', args.annotation_folder, args.annotation_folder)
+    dataset = COCO(image_field, text_field, '/coco/', args.annotation_folder, args.annotation_folder)
     _, _, test_dataset = dataset.splits
     text_field.vocab = pickle.load(open(args.vocab_path, 'rb'))
 
