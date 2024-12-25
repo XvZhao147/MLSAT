@@ -7,7 +7,7 @@
 This repository contains the official code implementation for the paper Multi-Level Semantic-Aware Transformer for Image Captioning.
 
 <p align="center">
-  <img src="framework.png" alt="Relationship-Sensitive Transformer" width="850"/>
+  <img src="framework.png" alt="MLSAT" width="850"/>
 </p>
 
 ## Table of Contents
